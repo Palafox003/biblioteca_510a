@@ -1,0 +1,453 @@
+{
+    "ncarrera" : "100010A",
+    "nombre" : "DISEÑO GRAFICO",
+    "logo" : "DG19.jpg"
+    }
+    ,
+    {
+    "ncarrera" : "9009A",
+    "nombre" : "ARQUITECTURA",
+    "logo" : "arquitectura18.jpg"
+    }
+    }
+    ,
+    {"ncarrera" : "8008A",
+    "nombre" : "ROBOTICA",
+    "logo" : "robotica17.jpg"
+    }
+    }
+    ,
+    {
+    "ncarrera" : "7007A",
+    "nombre" : "IDUSTRIAL",
+    "logo" : "industrial16.jpg"
+    }
+    ,
+    {
+    "ncarrera" : "6006A",
+    "nombre" : "ADMIN",
+    "logo" : "admin15.jpg"
+    }
+    }
+    ,
+    {
+    "ncarrera" : "5005A",
+    "nombre" : "CONTADURIA",
+    "logo" : "contaduria14.jpg"
+    }
+    ,
+    {
+    "ncarrera" : "4004A",
+    "nombre" : "TURISMO",
+    "logo" : "turismo13.jpg"
+    }
+    ,
+    {
+    "ncarrera" : "3003A",
+    "nombre" : "OCI",
+    "logo" : "oci12.jpg"
+    }
+    ,
+    {
+    "ncarrera" : "2002A",
+    "nombre" : "TICS",
+    "logo" : "TICS11.jpg"
+    }
+    ,
+    {
+    "ncarrera" : "1001A",
+    "nombre" : "AGRO",
+    "logo" : "agro10.jpg"
+    }
+    
+    //datos de los libros//
+    {
+    "titulo" : "La sintaxis de la imagen",
+    "area" : "Diseño grafico",
+    "autor" : "Octavio Hernandez",
+    "editorial" : "GG Diseño",
+    "portada" : "sintaxisimg.jpg",
+    "carrera_id" : "safajkijaf35423as10"
+    
+    },
+    {
+    "titulo" : "Introduccion a la administacion",
+    "area" : "Administrativa",
+    "autor" : "SerguiO Hernandez ",
+    "editorial" : "Mc",
+    "portada" : "admin.jpg",
+    "carrera_id" : "safajkijaf35423as06"
+    }
+    ,
+    {
+    "titulo" : "Gestion de calidad",
+    "area" : "Comercio",
+    "autor" : "Johana Reyes",
+    "editorial" : "Baker Tilly",
+    "portada" : "GC.jpg",
+    "carrera_id" : "safajkijaf35423as03"
+    }
+    ,
+    {
+    "titulo" : "Tegnologias de la informacion" ,
+    "area" : "Tegnologias" ,
+    "autor" : "Alfredo Muñoz" ,
+    "editorial" : "Alfaomega" ,
+    "portada" : "TI.jpg" ,
+    "carrera_id" : "safajkijaf35423as01"
+    }
+    ,
+    {
+    "titulo" : "Espacios verdes publicos",
+    "area" : "Arquitectura",
+    "autor" : "Amaya Jimenez",
+    "editorial" : "MIGLE",
+    "portada" : "ar.jpg",
+    "carrera_id" : "safajkijaf35423as09"
+    }
+    ,
+    {
+    "titulo" : "Turismo de aventura",
+    "area" : "Turismo",
+    "autor" : "William Gray",
+    "editorial" : "Trillas",
+    "portada" : "TA.jpg",
+    "carrera_id" : "safajkijaf35423as04"
+    }
+    ,
+    {
+    "titulo" : "Manual de plagas y enfermedades" ,
+    "area" : "Agrobiotegnologia",
+    "autor" : "Humberto Lopez",
+    "editorial" : "trillas",
+    "portada" : "plagas-jpg",
+    "carrera_id" : "safajkijaf35423as02"
+    }
+    ,
+    {
+    "titulo" : "Contabilidad administrativa",
+    "area" : "Contabilidad",
+    "autor" : "Luis Enrique Polanco",
+    "editorial" : "ECOE",
+    "portada" : "contaduria.jpg",
+    "carrera_id" : "safajkijaf35423as05"
+    }
+    ,
+    {
+    "titulo" : "Robotica educativa",
+    "area" : "Robotica",
+    "autor" : "Gabriel Ocaña",
+    "editorial" : "DEXTRA",
+    "portada" : "robotica.jpg",
+    "carrera_id" : "safajkijaf35423as08"
+    }
+    ,
+    {
+    "titulo" : "Introduccion a la ingenieria industrial",
+    "area" : "Industrial",
+    "autor" : "Jose F. Domingo",
+    "editorial" : "Alfaomega",
+    "portada" : "industrial.jpg",
+    "carrera_id" : "safajkijaf35423as07"
+    }
+    
+    //datos de los usuarios//
+    {
+    "id" : 1,
+    "matricula" : 21200010,
+    "nombre" : "Karen",
+    "paterno" : "Maya",
+    "materno" : "Simbron",
+    "correo" : "21200010@gmail.com",
+    "telefono" : 7859048933,
+    "direccion" :{
+    "id" : "10A",
+    "pais" : "Mexico",
+    "estado" : "Veracruz",
+    "ciudad" : "Papantla",
+    "cp" : 93400,
+    "descripcion" : "Pueblo magico",
+    "usuarios_id" : 01
+    }},
+    {
+    "id" : 02,
+    "matricula" : 21200009,
+    "nombre" : "Angel",
+    "paterno" : "Molina",
+    "materno" : "Fernandez",
+    "correo" : "21200009@gmail.com",
+    "telefono" : 7823678398,
+    "direccion" :{
+    "id" : "9A",
+    "pais" : "Mexico",
+    "estado" : "Veracruz",
+    "ciudad" : "Poza Rica",
+    "cp" : 93502,
+    "descripcion" : "Ciudad petrolera",
+    "usuarios_id" : 02
+    }},
+    {
+    "id" : 03,
+    "matricula" : 21200008,
+    "nombre" : "Aleida",
+    "paterno" : "Tiburcio",
+    "materno" : "Cano",
+    "correo" : "21200008@gmail.com",
+    "telefono" : 7831267366,
+    "direccion" : {
+    "id" : "8A",
+    "pais" : "Mexico",
+    "estado" : "Veracruz",
+    "ciudad" : "Papantla",
+    "cp" : 93400,
+    "descripcion" : "Pueblo magico",
+    "usuarios_id" : 03
+    }},
+    {
+    "id" : 04,
+    "matricula" : 21200007,
+    "nombre" : "Ivana",
+    "paterno" : "Perez",
+    "materno" : "Lopez",
+    "correo" : "21200007@gmail.com",
+    "telefono" : 748299928,
+    "direccion" :{
+    "id" : "7A",
+    "pais" : "Mexico",
+    "estado" : "Veracruz",
+    "ciudad" : "Papantla",
+    "cp" : 93400,
+    "descripcion" : "Pueblo magico",
+    "usuarios_id" : 04
+    }},
+    {
+    "id" : 05,
+    "matricula" : 21200006,
+    "nombre" : "Laura",
+    "paterno" : "Castellano",
+    "materno" : "Montes",
+    "correo" : "21200006@gmail.com",
+    "telefono" : 8907716277,
+    "direccion" :{
+    "id" : "6A",
+    "pais" : "Mexico",
+    "estado" : "Veracruz",
+    "ciudad" : "Tecolutla",
+    "cp" : 89199,
+    "descripcion" : "Playa",
+    "usuarios_id" : 05
+    }},
+    {
+    "id" : 06,
+    "matricula" : 21200005,
+    "nombre" : "Sintia",
+    "paterno" : "Armenta",
+    "materno" : "Hernandez",
+    "correo" : "21200005@gmail.com",
+    "telefono" : 9893476376,
+    "direccion" :{
+    "id" : "5A",
+    "pais" : "Mexico",
+    "estado" : "Veracruz",
+    "ciudad" : "Poza Rica",
+    "cp" : 93502,
+    "descripcion" : "Ciudad petrolera",
+    "usuarios_id" : 06
+    }},
+    {
+    "id" : 07,
+    "matricula" : 21200004,
+    "nombre" : "Andres",
+    "paterno" : "Moncayo",
+    "materno" : "Gomez",
+    "correo" : "21200004@gmail.com",
+    "telefono" : 7841890288,
+    "direccion" :{
+    "id" : "4A",
+    "pais" : "Mexico",
+    "estado" : "Veracruz",
+    "ciudad" : "Xalapa",
+    "cp" : 77001,
+    "descripcion" : "Capital",
+    "usuarios_id" : 07
+    }},
+    {
+    "id" : 07,
+    "matricula" : 21200004,
+    "nombre" : "Andres",
+    "paterno" : "Moncayo",
+    "materno" : "Gomez",
+    "correo" : "21200004@gmail.com",
+    "telefono" : 7841890288,
+    "direccion" :{
+    "id" : "4A",
+    "pais" : "Mexico",
+    "estado" : "Veracruz",
+    "ciudad" : "Xalapa",
+    "cp" : 77001,
+    "descripcion" : "Capital",
+    "usuarios_id" : 08
+    }},
+    {
+    "id" : 09,
+    "matricula" : 21200002,
+    "nombre" : "Johana",
+    "paterno" : "Moncayo",
+    "materno" : "Del angel",
+    "correo" : "21200002@gmail.com",
+    "telefono" : 7836376489,
+    "direccion" :{
+    "id" : "2A",
+    "pais" : "Mexico",
+    "estado" : "Veracruz",
+    "ciudad" : "Tecolutla",
+    "cp" : 89199,
+    "descripcion" : "Playa",
+    "usuarios_id" : 09
+    }},
+    {
+    "id" : 10,
+    "matricula" : 21200001,
+    "nombre" :"Erubiel",
+    "paterno" :"Villanueva",
+    "materno" : "Tolentino",
+    "correo" : "21200001@gmail.com",
+    "telefono" : 7812672829,
+    "direccion" :{
+    "id" : "1A",
+    "pais" : "Mexico",
+    "estado" : "Veracruz",
+    "ciudad" : "Papantla",
+    "cp" : 93400 ,
+    "descripcion" : "Pueblo magico",
+    "usuarios_id" : 10
+    }
+    }
+    
+    //datos de los libros y usuariso//
+    
+    {
+    "usuarios_id" : 1,
+    "libro_id" : "60386a185bc9478a07b0ce73",
+    "fecha1" :  Date(),
+    "fecha2" : new Date("2021-02-27"),
+    "estatus" : "Disponible"
+    },
+    {
+    "usuarios_id" : 2,
+    "libro_id" : "60386a185bc9478a07b0ce77",
+    "fecha1" :  Date(),
+    "fecha2" : new Date("2021-03-27"),
+    "estatus" : "No disponible"
+    }
+    ,
+    {
+    "usuarios_id" : 3,
+    "libro_id" : "60386a185bc9478a07b0ce75",
+    "fecha1" :  Date(),
+    "fecha2" : new Date("2021-06-2"),
+    "estatus" : "No disponible"
+    }
+    ,{
+    "usuarios_id" : 4,
+    "libro_id" : "60386a185bc9478a07b0ce76",
+    "fecha1" :  Date(),
+    "fecha2" : new Date("2021-04-6"),
+    "estatus" : "Disponible"
+    }
+    ,
+    {
+    "usuarios_id" : 5,
+    "libro_id" : "60386a185bc9478a07b0ce6f",
+    "fecha1" :  Date(),
+    "fecha2" : new Date("2021-02-27"),
+    "estatus" : "Disponible"
+    }
+    ,{
+    "usuarios_id" : 6,
+    "libro_id" : "60386a185bc9478a07b0ce6e",
+    "fecha1" :  Date(),
+    "fecha2" : new Date("2021-02-28"),
+    "estatus" : "Disponible"
+    }
+    ,{
+    "usuarios_id" : 7,
+    "libro_id" : "60386a185bc9478a07b0ce71",
+    "fecha1" :  Date(),
+    "fecha2" : new Date("2021-5-7"),
+    "estatus" : "No disponible"
+    }
+    ,{
+    "usuarios_id" : 8,
+    "libro_id" : "60386a185bc9478a07b0ce72",
+    "fecha1" :  Date(),
+    "fecha2" : new Date("2021-04-4"),
+    "estatus" : "Disponible"
+    }
+    ,{
+    "usuarios_id" : 9,
+    "libro_id" : "60386a185bc9478a07b0ce75",
+    "fecha1" :  Date(),
+    "fecha2" : new Date("2021-02-26"),
+    "estatus" : "No disponible"
+    }
+    
+    //busquedas por coleccion
+    db.carrera.find({"nombre":"TICS"}).pretty()
+    
+    db.carrera.find({"ncarrera":"200A"}).pretty()
+    
+    db.carrera.find({"nombre":"TURISMO"}).pretty()
+    
+    db.carrera.find({"ncarrera":"500A"}).pretty()
+    
+    db.carrera.find({"nombre":"DISEÑO GRAFICO"}).pretty()
+    
+    
+    db.libro_usuario.find({"estatus":"Disponible"}).pretty()
+    
+    db.libro_usuario.find({"estatus":"No disponible"}).pretty()
+    
+    db.libro_usuario.find({"fecha2":ISODate("2021-04-04T00:00:00Z")}).pretty()
+    
+    db.libro_usuario.find({"libro_id":"60386a185bc9478a07b0ce6e"}).pretty()
+    
+    db.libro_usuario.find({"fecha1":"Thu Feb 25 2021 23:59:34 GMT-0600"}).pretty()
+    
+    
+    db.libros.find({ "carrera_id" : "603833e05bc9478a07b0ce6d"}).pretty()
+    
+    db.libros.find({ "editorial" : "trillas"}).pretty()
+    
+    db.libros.find({ "editorial" : "Alfaomega"}).pretty()
+    
+    db.libros.find({ "area" : "Turismo"}).pretty()
+    
+    db.libros.find({ "titulo" : "Tegnologias de la informacion"}).pretty()
+    
+    
+    db.usuarios.find({ "direccion"."pais" : "Mexico"}).pretty()
+    
+    db.usuarios.find({"materno" : "Fernandez"}).pretty()
+    
+    db.usuarios.find({"ciudad" : "Papantla"}).pretty()
+    
+    db.usuarios.find({"descripcion" : "Playa"}).pretty()
+    
+    db.usuarios.find({ "paterno" : "Moncayo"}).pretty()
+    
+    //actualizacion
+    db.carrera.update({"ncarrera":"3003A"},{ "ncarrera":"3001A"})
+    
+    db.carrera.update({"ncarrera":"4004A"},{ "ncarrera":"4007A"})
+    
+    db.carrera.update({"ncarrera":"7007A"},{ "ncarrera":"8007A"})
+    
+    
+    //eliminacion
+    db.usuarios.remove({"ncarrera" : "400A"})
+    
+    db.libros.drop({})
+    
+    db.carrera.remove({"nombre" : "ROBOTICA"})
+    
