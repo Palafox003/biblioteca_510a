@@ -11,11 +11,6 @@ var controller={
             logo:"ti2.png"
         });
     },
-    listaCarreras:(req,res)=>{
-        return res.status(200).send({
-            message:'Imprimir la lista de carreras existentes.'
-        });
-    },
     otroEjemplo:(req,res)=>{
         return res.status(200).send({
             message:'Este es otro método del controllador de carreras'
@@ -71,7 +66,9 @@ var controller={
             });
         });
 
+
 // Retornar una respuesta correcta a la petición post
+/*
         return res.status(200).send({
             status:'success',
             message:'Datos guardados',
@@ -79,6 +76,134 @@ var controller={
             vnombre:validate_nombre,
             vlogo:validate_logo,
             carrera:datos
+        });
+*/
+    },
+    listaCarreras:(req,res)=>{
+
+        var numero=parseInt(req.params.numero,10);
+        var consulta=Carrera.find({});
+
+        if(numero || numero!=undefined){
+            consulta=consulta.limit(numero);
+        }
+
+
+        consulta.exec((err,carreras)=>{
+            if(err){
+                return res.status(500).send({
+                    status:'eror',
+                    message:'Error a consultar la base de datos.',
+                    x:numero
+                });
+            }
+            
+            if(!carreras){
+                return res.status(404).send({
+                    status:'eror',
+                    message:'No se encontro información en la base de datos.'
+                });
+            }
+
+            return res.status(200).send({
+                status:'success',
+                message:'Imprimir lista de carreras',
+                carreras:carreras
+            });
+
+        });
+    },
+//----------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------
+    buscarCarrera:(req,res)=>{
+        var carrera_id=req.params.carrera_id;
+
+
+        if(!carrera_id || carrera_id==null){
+            return res.status(404).send({
+                status:'error',
+                message:'El valor del ID es obligatorio.'
+            });
+        }
+
+        Carrera.findById(carrera_id,(err,carrera)=>{
+            if(err || !carrera){
+                return res.status(404).send({
+                    status:'error',
+                    message:'El al consultar la base de datos.'
+                }); 
+            }
+
+            return res.status(200).send({
+                status:'success',
+                message:'Buscar carrera por ID.',
+                carrera:carrera
+            });
+
+        });    
+    },
+//-------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
+    actualizarCarrera:(req,res)=>{
+
+        var carrera_id=req.params.carrera_id;
+        var datos=req.body;
+
+        try{
+            var validate_ncarrera=!validator.isEmpty(datos.ncarrera);
+            var validate_nombre=!validator.isEmpty(datos.nombre);
+            var validate_logo=!validator.isEmpty(datos.logo);
+        }catch(err){
+            return res.status(200).send({
+                status:'error',
+                message:'Faltan datos por enviar.'
+            });
+        }
+
+        if(validate_ncarrera && validate_nombre && validate_logo){
+            Carrera.findByIdAndUpdate({_id:carrera_id},datos,{new:true},(err, carreraUpdated)=>{
+                if(err || !carreraUpdated){
+                    return res.status(404).send({
+                        status:'error',
+                        message:'Faltan datos para actualizar.'
+                    });
+                }
+
+                return res.status(200).send({
+                    status:'success',
+                    message:'Datos actualizados.',
+                    carrera:carreraUpdated
+                });
+            });
+        }
+    },
+//--------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------
+//Eliminar carrera
+    eliminarCarrera:(req,res)=>{
+        var carrera_id=req.params.carrera_id;
+
+        Carrera.findByIdAndDelete({_id:carrera_id},(err,carraraRemoved)=>{
+            if(err){
+                return res.status(500).send({
+                    status:'eror',
+                    message:'Error el eliminar en la base de datos.',
+                    x:numero
+                });
+            }
+            
+            if(!carraraRemoved){
+                return res.status(404).send({
+                    status:'eror',
+                    message:'No se encontro la información a eliminar.'
+                });
+            }
+
+            return res.status(200).send({
+                status:'success',
+                message:'Datos Eliminados de forma correcta.',
+                carrera:carraraRemoved
+            });
         });
     }
 };
