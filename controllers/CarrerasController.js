@@ -3,6 +3,9 @@
 var validator=require('validator');
 var Carrera=require('../models/Carrera');
 
+var fs=require('fs');
+var path=require('path');
+
 var controller={
     datosCarrera:(req,res)=>{
         return res.status(200).send({
@@ -194,7 +197,7 @@ var controller={
             
             if(!carraraRemoved){
                 return res.status(404).send({
-                    status:'eror',
+                    status:'error',
                     message:'No se encontro la información a eliminar.'
                 });
             }
@@ -205,7 +208,68 @@ var controller={
                 carrera:carraraRemoved
             });
         });
-    }
+    },
+    cargarImagen:(req,res)=>{
+        if(!req.files){
+            return res.status(404).send({
+                status:'error',
+                message:'No se cargo la imagen seleccionada.'
+            });
+        }
+            var file_path=req.files.img.path;
+            var file_split=file_path.split('\\');
+            var file_name=file_split[2];
+
+            var file_extension_split=file_name.split('\.');
+            var file_extension=file_extension_split[1];
+
+            if(file_extension!='png'){
+                fs.unlink(file_path,(err)=>{
+                    return res.status(404).send({
+                        status:'error',
+                        message:'El formato '+file_extension+' de la imagen no es aceptado se requiere un formato png.'
+                    });
+                });
+
+                return res.status(404).send({
+                    status:'error',
+                    message:'El formato '+file_extension+' de la imagen no es aceptado se requiere un formato png.'
+                });
+            }
+
+            var carrera_id=req.params.carrera_id;
+
+            Carrera.findByIdAndUpdate({_id:carrera_id},{logo:file_name},{new:true},(err,carreraUpdated)=>{
+                if(err || !carreraUpdated){
+                    return res.status(404).send({
+                        status:'error',
+                        message:'Error al actualizar el logo de la carrera.'
+                    });
+                }
+            });
+
+            return res.status(200).send({
+                status:'success',
+                message:'Datos cargados de forma correcta.',
+                carrera_id
+            });
+        },
+//-------------------------------------------------------------------------------
+        getImagen:(req,res)=>{
+            var file=req.params.imagen;
+            var path_file='./upload/carreras/'+file;
+
+            fs.exists(path_file,(exists)=>{
+                if(exists){
+                    return res.sendfile(path.resolve(path_file));
+                }else{
+                    return res.status(404).send({
+                        status:'error',
+                        message:'La imagen no existe.'
+                    });
+                }
+            });
+        }
 };
 
 module.exports=controller;
